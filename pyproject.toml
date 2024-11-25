@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "cep-validation"
+version = "0.1.0"
+description = ""
+authors = ["Henrique Martinelli <henrique.martinelli@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.5"
+uvicorn = {extras = ["standard"], version = "^0.32.1"}
+httpx = "^0.27.2"
+tenacity = "^9.0.0"
+sqlalchemy = "^2.0.36"
+asyncpg = "^0.30.0"
+alembic = "^1.14.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+httpx = "^0.27.2"
+pytest-cov = "^6.0.0"
+black = "^24.10.0"
+flake8 = "^7.1.1"
+isort = "^5.13.2"
+taskipy = "^1.14.0"
+
+[tool.poetry.scripts]
+test = "pytest"
+format = "black ."
+lint = "flake8 ."
+
+[tool.taskipy.tasks]
+up = {cmd = "uvicorn app.app:app --reload", help = "Start the API in development mode"}
+test = {cmd = "pytest", help = "Run all tests"}
+format = {cmd = "black .", help = "Format code using Black"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

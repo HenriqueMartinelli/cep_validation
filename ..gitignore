@@ -1,0 +1,60 @@
+# Arquivos de cache do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambiente virtual
+env/
+venv/
+ENV/
+.venv/
+
+# Configurações de IDEs/editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos temporários
+*.swp
+*.bak
+*.tmp
+*.log
+*.out
+*.pid
+*.seed
+
+# Arquivos de lock
+Pipfile.lock
+poetry.lock
+
+# Arquivos de pacotes Python
+*.egg
+*.egg-info/
+dist/
+build/
+*.wheel
+
+# Configurações de sistemas de build
+.pytest_cache/
+.tox/
+.coverage
+coverage.xml
+nosetests.xml
+*.cover
+htmlcov/
+*.pytest_cache
+
+# Arquivos de logs e dumps
+*.log
+*.sql
+*.sqlite3
+db.sqlite3
+
+# Arquivos de teste
+test-results/
+junit.xml
+
+# Outros arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
